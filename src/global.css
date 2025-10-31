@@ -1,0 +1,160 @@
+/* Reset + Tailwind setup */
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+button {
+  font-family: inherit;
+}
+
+main {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/poppins/poppins-v24-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/outfit/outfit-v15-latin-700.woff2") format("woff2");
+}
+
+h1 {
+  font-family: "Outfit", sans-serif;
+  margin-top: 0;
+}
+
+h2, h3 {
+  font-family: "Poppins", sans-serif;
+  margin-top: 0;
+}
+
+/* Theme Variables */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+}
+
+/* 🌞 Light Theme */
+:root {
+  --radius: 0.625rem;
+
+  --background: oklch(0.98 0.002 270); /* soft white */
+  --foreground: oklch(0.16 0.03 270); /* dark text */
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.13 0.028 261.692);
+
+  --primary: oklch(0.53 0.19 285); /* vibrant purple */
+  --primary-foreground: oklch(0.98 0.002 247.839);
+
+  --secondary: oklch(0.74 0.18 240); /* cyan tint */
+  --secondary-foreground: oklch(0.15 0.03 270);
+
+  --accent: oklch(0.84 0.13 320); /* pink-magenta accent */
+  --accent-foreground: oklch(0.15 0.03 270);
+
+  --border: oklch(0.88 0.01 270);
+  --muted: oklch(0.93 0.005 270);
+  --muted-foreground: oklch(0.4 0.02 270);
+
+  --ring: oklch(0.6 0.12 280);
+}
+
+/* 🌑 Dark Theme (Your Brand Core) */
+.dark {
+  --background: oklch(0.12 0.015 270); /* near black */
+  --foreground: oklch(0.97 0.01 270); /* soft white text */
+
+  --card: oklch(0.16 0.02 270);
+  --card-foreground: oklch(0.96 0.01 270);
+
+  --primary: oklch(0.55 0.22 280); /* vibrant royal purple */
+  --primary-foreground: oklch(0.97 0.005 270);
+
+  --secondary: oklch(0.65 0.18 230); /* electric cyan accent */
+  --secondary-foreground: oklch(0.1 0.02 270);
+
+  --accent: oklch(0.55 0.18 320); /* magenta glow */
+  --accent-foreground: oklch(0.98 0.002 270);
+
+  --border: oklch(0.25 0.015 270);
+  --muted: oklch(0.2 0.01 270);
+  --muted-foreground: oklch(0.65 0.02 270);
+
+  --ring: oklch(0.55 0.22 280); /* match purple glow */
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "zenfratech-school-website",
+  "version": "1.0.0",
+  "description": "Zenfratech School Website built with React, Vite and GSAP animations",
+  "author": "Zenfratech Team",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@tabler/icons-react": "^3.35.0",
+    "@tailwindcss/postcss": "^4.1.15",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "gsap": "^3.13.0",
+    "lucide-react": "^0.548.0",
+    "next-themes": "^0.4.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.12.1",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.21",
+    "jest": "^29.5.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.15",
+    "vite": "^4.3.9"
+  }
+}
