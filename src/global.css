@@ -1,5 +1,5 @@
 /* Reset + Tailwind setup */
-@import "tailwindcss";
+/* @import "tailwindcss"; */
 
 @tailwind base;
 @tailwind components;
